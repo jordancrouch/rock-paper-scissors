@@ -1,2 +1,2 @@
-# rock_paper_scissors
+# rock-paper-scissors
 Rock paper scissors - The Odin Project
