@@ -13,7 +13,7 @@ const player = document.querySelector("#player-score");
 player.textContent = `Your Score: ${playerScore}`;
 
 const cpu = document.querySelector("#computer-score");
-cpu.textContent = `Computer Score: ${computerScore}`;
+cpu.textContent = `Mel's Score: ${computerScore}`;
 
 
 function getComputerChoice() {
@@ -31,29 +31,29 @@ buttons.forEach(button => {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        roundOutput.textContent = `It's a draw! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+        roundOutput.textContent = `It's a draw! You chose ${playerSelection} and Mel chose ${computerSelection}`;
     } else if (playerSelection == "Rock") {
         if (computerSelection == "Paper") {
-            roundOutput.textContent = `You lose! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You lose! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             computerScore++;
         } else {
-            roundOutput.textContent = `You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You win! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             playerScore++;
         }
     } else if (playerSelection == "Paper") {
         if (computerSelection == "Scissors") {
-            roundOutput.textContent = `You lose! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You lose! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             computerScore++;
         } else {
-            roundOutput.textContent = `You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You win! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             playerScore++;
         }
     } else if (playerSelection == "Scissors") {
         if (computerSelection == "Rock") {
-            roundOutput.textContent = `You lose! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You lose! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             computerScore++;
         } else {
-            roundOutput.textContent = `You win! You chose ${playerSelection} and the computer chose ${computerSelection}`;
+            roundOutput.textContent = `You win! You chose ${playerSelection} and Mel chose ${computerSelection}`;
             playerScore++;
         }
     }
@@ -63,19 +63,19 @@ function playGame(playerSelection) {
     const computerSelection = getComputerChoice();
     playRound(playerSelection, computerSelection);
     player.textContent = `Your Score: ${playerScore}`;
-    cpu.textContent = `Computer Score: ${computerScore}`;
+    cpu.textContent = `Mel's Score: ${computerScore}`;
 
     if (playerScore == 5) {
-        roundOutput.innerHTML = `You won the game! Play again?`;
+        roundOutput.innerHTML = `Congratulations, you beat Mel! You got lucky - play again?`;
         playerScore = 0;
         computerScore = 0;
         player.textContent = `Your Score: ${playerScore}`;
-        cpu.textContent = `Computer Score: ${playerScore}`;
+        cpu.textContent = `Mel's Score: ${playerScore}`;
     } else if (computerScore == 5) {
-        roundOutput.textContent = `You lost the game! Play again?`;
+        roundOutput.textContent = `Haha, Mel wins and you lose! Want to try again?`;
         playerScore = 0;
         computerScore = 0;
         player.textContent = `Your Score: ${playerScore}`;
-        cpu.textContent = `Computer Score: ${playerScore}`;
+        cpu.textContent = `Mel's Score: ${playerScore}`;
     }
 }

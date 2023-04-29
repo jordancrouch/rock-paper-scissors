@@ -1,0 +1,100 @@
+body {
+    background-color: #957DAD;
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 1em;
+}
+
+p {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 3em 60px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.headings {
+    text-align: center;
+}
+
+.headings p:not(#round-output) {
+    margin-bottom: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.button-wrapper p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button {
+    flex: 0 0 200px;
+    max-width: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.button img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out; 
+}
+
+.button:hover img {
+    transform: scale(1.1);
+}
+
+.scores {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 3em;
+    }
+    
+    .buttons {
+        flex-direction: row;
+    }
+    
+    .button {
+        flex: 0 0 200px;
+    }
+
+    .scores {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+    }
+}

@@ -5,22 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors - The Odin Project</title>
+    <link rel="stylesheet" href="style.css">
     <script src="javascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <p>First to 5 wins!</p>
-    <div>
-        <p id="round-output">Choose your weapon:</p>
-    </div>
-    <div class="button-wrapper">
-        <button class="button" id="rock">Rock</button>
-        <button class="button" id="paper">Paper</button>
-        <button class="button" id="scissors">Scissors</button>
-    </div>
-    <div class="scores">
-        <p id="player-score">Your Score:</p>
-        <p id="computer-score">Computer Score:</p>
+    <div class="wrapper">
+        <div class="container">
+            <div class="headings">
+                <h1>Mel's Rock Paper Scissors</h1>
+                <p>Think you can beat Mel at Rock Paper Scissors?<br>First to 5 wins!</p>
+                <p id="round-output">Choose your weapon:</p>
+            </div>
+            <div class="buttons">
+                <div class="button-wrapper">
+                    <div class="button" id="rock">
+                        <img src="images/rock.jpg" alt="Rock" />
+                    </div>
+                    <p>Rock</p>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button" id="paper">
+                        <img src="images/paper.jpg" alt="Paper" />
+                    </div>
+                    <p>Paper</p>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button" id="scissors">
+                        <img src="images/scissors.jpg" alt="Scissors" />
+                        
+                    </div>
+                    <p>Scissors</p>
+                </div>
+            </div>
+            <div class="scores">
+                <p id="player-score">Your Score:</p>
+                <p id="computer-score">Mel's Score:</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
